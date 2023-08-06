@@ -1,0 +1,62 @@
+form {
+  color: white;
+  border-radius: 8px;
+  height: 100%;
+}
+
+.form-group {
+  margin-bottom: 20px;
+}
+
+label {
+  display: block;
+  margin-bottom: 10px; /* Aumenta la distancia entre el label y el input */
+}
+
+input,
+select {
+  border: none;
+  border-bottom: 1px solid gray;
+  background-color: transparent;
+  color: white;
+  outline: none;
+  width: 100%;
+  padding: 5px 0;
+}
+
+input:focus,
+select:focus {
+  border-color: #ffffff; /* Cambia el color del borde cuando está enfocado */
+}
+
+input[type="password"] {
+  letter-spacing: 3px; /* Just for better password visibility */
+}
+
+button {
+  width: 100%;
+  padding: 10px 20px;
+  border-radius: 25px;
+  background-color: white;
+  color: #353a61;
+  cursor: pointer;
+  border: none;
+  outline: none;
+}
+
+.error-message {
+  margin-left: 0.8rem;
+  color: red;
+}
+
+/* Cambia el fondo y el color de las letras cuando el select está en foco (seleccionado) */
+select:focus {
+  background-color: #353a61;
+  color: white;
+}
+
+/* Cambia el fondo y el color de las letras cuando el select está en estado activo (mientras se hace clic) */
+select:active {
+  background-color: #353a61;
+  color: white;
+}

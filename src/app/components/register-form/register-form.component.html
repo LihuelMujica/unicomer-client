@@ -1,0 +1,64 @@
+<form (ngSubmit)="register()" #registerForm="ngForm" novalidate>
+
+  <div class="form-group">
+    <label for="nombre">Nombre:
+      <span *ngIf="registerForm.controls['nombre']?.touched && registerForm.controls['nombre'].hasError('required')" class="error-message">Debe ingresar el nombre.</span>
+    </label>
+    <input type="text" placeholder="Ej: Juan" id="nombre" name="nombre" [(ngModel)]="user.nombre" required>
+  </div>
+
+  <div class="form-group">
+    <label for="apellido">Apellido:
+      <span *ngIf="registerForm.controls['apellido']?.touched && registerForm.controls['apellido'].hasError('required')" class="error-message">Debe ingresar el apellido.</span>
+    </label>
+    <input type="text" placeholder="Ej: Perez" id="apellido" name="apellido" [(ngModel)]="user.apellido" required>
+  </div>
+
+  <div class="form-group">
+    <label for="fechaNacimiento">Fecha de Nacimiento:
+      <span *ngIf="registerForm.controls['fechaNacimiento']?.touched && registerForm.controls['fechaNacimiento'].hasError('required')" class="error-message">Debe ingresar la fecha de nacimiento.</span>
+    </label>
+    <input type="date" id="fechaNacimiento" name="fechaNacimiento" [(ngModel)]="user.fechaNacimiento" required>
+  </div>
+
+  <div class="form-group">
+    <label for="tipoDocumento">Tipo de Documento:
+      <span *ngIf="registerForm.controls['tipoDocumento']?.touched && registerForm.controls['tipoDocumento'].hasError('required')" class="error-message">Debe seleccionar un tipo de documento.</span>
+    </label>
+    <select id="tipoDocumento" name="tipoDocumento" [(ngModel)]="user.tipoDocumento" required>
+      <option value="" disabled selected>Seleccione un tipo de documento</option>
+      <option value="DNI">DNI</option>
+      <option value="Pasaporte">Pasaporte</option>
+      <!-- Agrega otros tipos de documento que puedan existir en Argentina -->
+    </select>
+  </div>
+
+  <div class="form-group">
+    <label for="numeroDocumento">Número de Documento:
+      <span *ngIf="registerForm.controls['numeroDocumento']?.touched && registerForm.controls['numeroDocumento'].hasError('required')" class="error-message">Debe ingresar el número de documento.</span>
+      <span *ngIf="registerForm.controls['numeroDocumento']?.touched && registerForm.controls['numeroDocumento'].hasError('pattern')" class="error-message">El número de documento debe tener entre 7 y 8 dígitos numéricos.</span>
+    </label>
+    <input type="text" placeholder="Ej: 42921480" id="numeroDocumento" name="numeroDocumento" [(ngModel)]="user.numeroDocumento" required pattern="[0-9]{7,8}">
+  </div>
+
+
+  <div class="form-group">
+    <label for="correoElectronico">Correo Electrónico:
+      <span *ngIf="registerForm.controls['correoElectronico']?.touched && registerForm.controls['correoElectronico'].hasError('required')" class="error-message">Debe ingresar el correo electrónico.</span>
+    </label>
+
+    <input type="email" placeholder="Ej: juan.perez@example.com" id="correoElectronico" name="correoElectronico" [(ngModel)]="user.correoElectronico" required>
+  </div>
+
+  <div class="form-group">
+    <label for="clave">Clave:
+      <span *ngIf="registerForm.controls['clave']?.touched && registerForm.controls['clave'].hasError('required')" class="error-message">Debe ingresar la clave.</span>
+      <span *ngIf="registerForm.controls['clave']?.touched && registerForm.controls['clave'].hasError('minlength')" class="error-message">La clave debe tener al menos 6 caracteres.</span>
+    </label>
+    <input type="password" placeholder="********" id="clave" name="clave" [(ngModel)]="user.clave" required minlength="6">
+  </div>
+
+
+  <div class="form-group"><button [disabled]="registerForm.invalid" type="submit">Registrarse</button></div>
+
+</form>

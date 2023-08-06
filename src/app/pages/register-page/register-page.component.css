@@ -1,0 +1,109 @@
+.container {
+  display: flex;
+  height: 100vh;
+}
+
+.left-half {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center; /* Centrar horizontalmente */
+  justify-content: center; /* Centrar verticalmente */
+  padding: 20px;
+}
+
+.right-half {
+  flex: 1;
+  background-color: #353a61; /* Cambiar el color azul por #353a61 */
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start; /* Alinear el contenido desde arriba */
+  color: white;
+}
+
+strong {
+  font-weight: 100px;
+  color: #353a61;
+}
+
+h1 {
+  font-weight: bold;
+  font-size: 40px; /* Tamaño del texto más grande */
+  margin-bottom: 20px; /* Espacio adicional debajo del título */
+}
+
+.logo {
+  width: 100px;
+  margin-bottom: 0px; /* Ajustar la distancia desde abajo */
+  margin-top: 30px; /* Ajustar la distancia desde arriba, establecer en 0 */
+  /*left align flexbox*/
+  align-self: flex-start;
+  font-size: 50px;
+
+  margin-top: 2rem;
+  margin-bottom: 7rem;
+}
+
+.register-text {
+  text-decoration: underline;
+  cursor: pointer;
+  margin-top: auto; /* Colocar el texto al final del contenedor */
+  margin-top: 1rem;
+  align-self: center;
+}
+
+/* Estilos para el formulario y su contenedor */
+.form-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: 100%;
+  margin-left: 100px;
+  max-width: 600px; /* Ajustar el ancho máximo del formulario según tu preferencia */
+  margin: 0 auto; /* Centrar horizontalmente y agregar margen */
+}
+
+.form {
+  width: 100%; /* Ocupar todo el ancho del contenedor */
+  /* max-width: 800px; Ajustar el ancho máximo del formulario según tu preferencia */
+}
+
+body {
+  background-color: white;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='400' height='400' viewBox='0 0 800 800'%3E%3Cg fill='none' stroke='%23878787' stroke-width='1'%3E%3Cpath d='M769 229L1037 260.9M927 880L731 737 520 660 309 538 40 599 295 764 126.5 879.5 40 599-197 493 102 382-31 229 126.5 79.5-69-63'/%3E%3Cpath d='M-31 229L237 261 390 382 603 493 308.5 537.5 101.5 381.5M370 905L295 764'/%3E%3Cpath d='M520 660L578 842 731 737 840 599 603 493 520 660 295 764 309 538 390 382 539 269 769 229 577.5 41.5 370 105 295 -36 126.5 79.5 237 261 102 382 40 599 -69 737 127 880'/%3E%3Cpath d='M520-140L578.5 42.5 731-63M603 493L539 269 237 261 370 105M902 382L539 269M390 382L102 382'/%3E%3Cpath d='M-222 42L126.5 79.5 370 105 539 269 577.5 41.5 927 80 769 229 902 382 603 493 731 737M295-36L577.5 41.5M578 842L295 764M40-201L127 80M102 382L-261 269'/%3E%3C/g%3E%3Cg fill='%23595959'%3E%3Ccircle cx='769' cy='229' r='5'/%3E%3Ccircle cx='539' cy='269' r='5'/%3E%3Ccircle cx='603' cy='493' r='5'/%3E%3Ccircle cx='731' cy='737' r='5'/%3E%3Ccircle cx='520' cy='660' r='5'/%3E%3Ccircle cx='309' cy='538' r='5'/%3E%3Ccircle cx='295' cy='764' r='5'/%3E%3Ccircle cx='40' cy='599' r='5'/%3E%3Ccircle cx='102' cy='382' r='5'/%3E%3Ccircle cx='127' cy='80' r='5'/%3E%3Ccircle cx='370' cy='105' r='5'/%3E%3Ccircle cx='578' cy='42' r='5'/%3E%3Ccircle cx='237' cy='261' r='5'/%3E%3Ccircle cx='390' cy='382' r='5'/%3E%3C/g%3E%3C/svg%3E");
+}
+
+
+/*La mitad izquierda se elimina y el logo se centra cuando la pantalla es más pequeña que 900px*/
+@media (max-width: 900px) {
+  .container {
+    flex-direction: column;
+  }
+
+  .left-half {
+    display: none;
+  }
+
+  .logo {
+    position: relative;
+    margin: 0;
+    margin-top: 7rem;
+    margin-bottom: 4rem;
+    align-self: center;
+  }
+
+  .form-container {
+    height: 80%;
+  }
+
+  .register-text {
+    margin-top: 3rem;
+  }
+
+
+}
+
