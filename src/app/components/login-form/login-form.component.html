@@ -1,0 +1,29 @@
+<form (ngSubmit)="login()" #loginForm="ngForm"  >
+  <div class="form-group">
+    <label for="tipoDocumento">Tipo de Documento:
+      <span *ngIf="loginForm.controls['tipoDocumento']?.touched && loginForm.controls['tipoDocumento'].hasError('required')" class="error-message">Debe seleccionar un tipo de documento.</span>
+    </label>
+    <select id="tipoDocumento" name="tipoDocumento" [(ngModel)]="user.tipoDocumento" required>
+      <option value="" disabled selected>Seleccione un tipo de documento</option>
+      <option value="DNI">DNI</option>
+      <option value="Pasaporte">Pasaporte</option>
+      <!-- Agregar otros tipos de documento que puedan existir en Argentina -->
+    </select>
+  </div>
+
+  <div class="form-group">
+    <label for="numeroDocumento">Número de Documento:
+      <span *ngIf="loginForm.controls['numeroDocumento']?.touched && loginForm.controls['numeroDocumento'].hasError('required')" class="error-message">Debe ingresar el número de documento.</span>
+    </label>
+    <input type="text" placeholder="Ej: 42921480" id="numeroDocumento" name="numeroDocumento" [(ngModel)]="user.numeroDocumento" required>
+  </div>
+
+  <div class="form-group">
+    <label for="clave">Clave:
+      <span *ngIf="loginForm.controls['clave']?.touched && loginForm.controls['clave'].hasError('required')" class="error-message">Debe ingresar la clave.</span>
+    </label>
+    <input type="password" placeholder="********" id="clave" name="clave" [(ngModel)]="user.clave" required>
+  </div>
+
+  <button type="submit" >Iniciar sesión</button>
+</form>
