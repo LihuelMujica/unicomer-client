@@ -1,0 +1,73 @@
+.credit-card {
+  background-color: rgb(48, 97, 232);
+  color: white;
+  border: 1px solid #ccc;
+  border-radius: 20px;
+  width: 400px;
+  height: 250px;
+  margin: 20px;
+  display: flex;
+  flex-direction: column;
+  /* items should be together in a row */
+  justify-content: space-between;
+}
+
+.header {
+  margin: 20px 20px 10px 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  color: white;
+}
+
+.balance {
+  display: flex;
+  flex-direction: column;
+  /*one item per row*/
+
+  align-items: flex-start;
+}
+
+.amount {
+  font-size: 20px;
+}
+
+.card-number {
+  margin: 0 20px 10px 20px;
+  font-size: 1rem;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+}
+
+.card-number span {
+  margin-left: 5px;
+}
+
+.info {
+  margin: 0 20px 20px 20px;
+  display: flex;
+  align-items: flex-start;
+
+}
+
+.info .cardholder {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  flex: 1;
+}
+
+.info .expires {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  flex: 1;
+}
+
+.data {
+  margin-top: 0.2rem;
+}
+
+
+

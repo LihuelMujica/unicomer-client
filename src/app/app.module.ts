@@ -17,6 +17,7 @@ import { AsideComponent } from './components/aside/aside.component';
 import { DashboardComponent } from './components/dashboard/dashboard.component';
 import { HeaderComponent } from './components/header/header.component';
 import { SearchBarComponent } from './components/search-bar/search-bar.component';
+import { CreditCardComponent } from './components/credit-card/credit-card.component';
 
 @NgModule({
   declarations: [
@@ -29,7 +30,8 @@ import { SearchBarComponent } from './components/search-bar/search-bar.component
     AsideComponent,
     DashboardComponent,
     HeaderComponent,
-    SearchBarComponent
+    SearchBarComponent,
+    CreditCardComponent
   ],
   imports: [
     BrowserModule,

@@ -1,0 +1,24 @@
+<div class="credit-card">
+  <div class="header">
+    <div class="balance">
+      <span class="title">Mi saldo</span>
+      <span class="data" class="amount">$ {{balance}}</span>
+    </div>
+    <img src="https://download.logo.wine/logo/Mastercard/Mastercard-Logo.wine.png" width="50px" alt="logo Mastercard">
+  </div>
+  <div class="card-number">
+    <span>●●●●</span>
+    <span>●●●●</span>
+    <span>●●●●</span>
+    <span>{{card.last4Digits}}</span>
+  </div>
+  <div class="info">
+    <div class="cardholder">
+      <span>Titular tarjeta</span>
+      <span class="data">{{card.cardHolderName}}</span>
+    </div>
+    <div class="expires">
+      <span >Expira</span>
+      <span class="data">{{card.cardExpirationDate}}</span>
+    </div>
+</div>
