@@ -3,6 +3,7 @@ import { HttpClient } from '@angular/common/http';
 import { HttpErrorResponse, HttpStatusCode } from '@angular/common/http';
 import { Observable } from 'rxjs';
 import { catchError, tap } from 'rxjs/operators';
+import { Router } from '@angular/router';
 
 import { TokenService } from './token.service';
 import { environment } from '../../environments/environment';
@@ -17,7 +18,8 @@ export class AuthService {
 
   constructor(
     private http: HttpClient,
-    private tokenService: TokenService
+    private tokenService: TokenService,
+    private router: Router
   ) { }
 
   login(dniType: string, dni: string, password: string) {
@@ -27,6 +29,11 @@ export class AuthService {
       }),
       tap(response => this.tokenService.saveToken(response.jwt))
     )
+  }
+
+  logout() {
+    this.tokenService.removeToken();
+    this.router.navigate(['/login']);
   }
 
   private handleErrors(error: HttpErrorResponse): Observable<never> {

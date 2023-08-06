@@ -1,1 +1,12 @@
-<p>aside works!</p>
+<div class="sidebar">
+  <div class="logo">
+    <span>Logo</span>
+  </div>
+  <ul class="menu">
+    <li class="active"><a href="#"><div><i class="fas fa-home"></i></div> Inicio</a></li>
+    <div *ngFor="let option of optionsMenu">
+      <li><a href="#"><div><i [ngClass]="option.icon"></i></div>{{option.name}}</a></li>
+    </div>
+    <li><a href="#" (click)="logout()"><div><i class="fas fa-sign-out-alt"></i></div> Salir</a></li>
+  </ul>
+</div>

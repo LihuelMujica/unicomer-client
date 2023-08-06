@@ -1,0 +1,48 @@
+.top-bar {
+  display: flex;
+  align-items: center;
+  justify-content:space-between;
+  padding: 10px;
+}
+
+/* app-search-bar should be in the center */
+app-search-bar {
+  margin-left: 4rem;
+  width: 50%;
+}
+
+.search-bar {
+  display: flex;
+  align-items: center;
+  border: 1px solid #d0d0d0;
+  border-radius: 5px;
+}
+
+.search-bar input {
+  width: 200px;
+  padding: 5px;
+  border: none;
+}
+
+.search-bar button {
+  padding: 5px;
+  border: none;
+  background-color: #0078d4;
+  color: white;
+}
+
+/* profile should be on the right side */
+.profile {
+  display: flex;
+  align-items: center;
+}
+
+
+.profile img {
+  height: 2.5rem;
+  border-radius: 50%;
+}
+
+.profile .name {
+  margin-right: 4rem;
+}
