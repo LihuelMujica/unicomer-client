@@ -23,7 +23,6 @@ export class LoginFormComponent {
   constructor(private authService: AuthService, private router: Router) {}
 
   login() {
-    // Aquí puedes agregar la lógica para enviar la información del formulario a tu servidor o realizar las acciones necesarias para el login.
     try {
       this.authService.login(this.user.tipoDocumento, this.user.numeroDocumento, this.user.clave).subscribe({
         next: (data) => {

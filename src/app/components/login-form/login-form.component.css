@@ -1,4 +1,3 @@
-/* styles.css */
 form {
   color: white;
   border-radius: 8px;
@@ -31,7 +30,7 @@ select:focus {
 }
 
 input[type="password"] {
-  letter-spacing: 3px; /* Just for better password visibility */
+  letter-spacing: 3px; /* para mejorar la visibilidad de la contraseña */
 }
 
 button {
