@@ -4,7 +4,7 @@
   <app-outcome-card [outcome]="user.last30DaysOutcome"></app-outcome-card>
 </div>
 <div class="stats">
-  <app-bar-chart></app-bar-chart>
+  <app-bar-chart [lastWeek]="lastWeek" [thisWeek]="thisWeek"></app-bar-chart>
   <app-last-transactions></app-last-transactions>
 </div>
 
