@@ -20,6 +20,8 @@ import { SearchBarComponent } from './components/search-bar/search-bar.component
 import { CreditCardComponent } from './components/credit-card/credit-card.component';
 import { IncomeCardComponent } from './components/income-card/income-card.component';
 import { OutcomeCardComponent } from './components/outcome-card/outcome-card.component';
+import { NgChartsModule } from 'ng2-charts';
+import { BarChartComponent } from './components/bar-chart/bar-chart.component';
 
 @NgModule({
   declarations: [
@@ -35,13 +37,15 @@ import { OutcomeCardComponent } from './components/outcome-card/outcome-card.com
     SearchBarComponent,
     CreditCardComponent,
     IncomeCardComponent,
-    OutcomeCardComponent
+    OutcomeCardComponent,
+    BarChartComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     FormsModule,
-    HttpClientModule
+    HttpClientModule,
+    NgChartsModule
   ],
   providers: [
     { provide: HTTP_INTERCEPTORS, useClass: TokenInterceptor, multi: true}
