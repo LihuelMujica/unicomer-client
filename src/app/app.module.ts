@@ -19,6 +19,7 @@ import { HeaderComponent } from './components/header/header.component';
 import { SearchBarComponent } from './components/search-bar/search-bar.component';
 import { CreditCardComponent } from './components/credit-card/credit-card.component';
 import { IncomeCardComponent } from './components/income-card/income-card.component';
+import { OutcomeCardComponent } from './components/outcome-card/outcome-card.component';
 
 @NgModule({
   declarations: [
@@ -33,7 +34,8 @@ import { IncomeCardComponent } from './components/income-card/income-card.compon
     HeaderComponent,
     SearchBarComponent,
     CreditCardComponent,
-    IncomeCardComponent
+    IncomeCardComponent,
+    OutcomeCardComponent
   ],
   imports: [
     BrowserModule,

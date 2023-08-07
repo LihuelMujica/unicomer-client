@@ -1,0 +1,47 @@
+.card {
+  background-color: #ffffff;
+  color: grey;
+  border-radius: 20px;
+  width: 400px;
+  height: 250px;
+  margin: 20px;
+  display: flex;
+  flex-direction: column;
+  /* items should be together in a row */
+  justify-content: space-between;
+}
+
+.header {
+  margin: 20px 20px 10px 20px;
+  display: flex;
+  justify-content: flex-start;
+  align-items: flex-start;
+}
+
+.balance {
+  display: flex;
+  flex-direction: column;
+  /*one item per row*/
+
+  align-items: flex-start;
+}
+
+.amount {
+  font-size: 20px;
+  color: black;
+}
+
+.circle {
+  padding: 15px;
+  border-radius: 50%;
+  background-color: #5d95be;
+  color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-right: 20px;
+}
+
+.data {
+  font-weight: bolder;
+}
