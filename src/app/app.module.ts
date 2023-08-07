@@ -23,6 +23,8 @@ import { OutcomeCardComponent } from './components/outcome-card/outcome-card.com
 import { NgChartsModule } from 'ng2-charts';
 import { BarChartComponent } from './components/bar-chart/bar-chart.component';
 import { LastTransactionsComponent } from './components/last-transactions/last-transactions.component';
+import { SpinnerComponent } from './components/spinner/spinner.component';
+import { LoadingInterceptor } from './interceptors/loading.interceptor';
 
 @NgModule({
   declarations: [
@@ -40,7 +42,8 @@ import { LastTransactionsComponent } from './components/last-transactions/last-t
     IncomeCardComponent,
     OutcomeCardComponent,
     BarChartComponent,
-    LastTransactionsComponent
+    LastTransactionsComponent,
+    SpinnerComponent
   ],
   imports: [
     BrowserModule,
@@ -50,7 +53,8 @@ import { LastTransactionsComponent } from './components/last-transactions/last-t
     NgChartsModule
   ],
   providers: [
-    { provide: HTTP_INTERCEPTORS, useClass: TokenInterceptor, multi: true}
+    { provide: HTTP_INTERCEPTORS, useClass: TokenInterceptor, multi: true},
+    { provide: HTTP_INTERCEPTORS, useClass: LoadingInterceptor, multi: true}
   ],
   bootstrap: [AppComponent]
 })
