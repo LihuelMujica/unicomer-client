@@ -2,38 +2,12 @@
   <h1 class="item">Últimas transacciones</h1>
   <div class="container">
 
-      <div class="flex-row">
-          <span class="name item">Samantha V.</span>
-          <span class="amount item">$69,038</span>
-          <span class="date item">25 Ene, 2023</span>
-          <span class="status completed item">Completado</span>
+      <div class="flex-row" *ngFor="let transaction of transactions">
+          <span class="name item">{{getTransactionTarget(loggedUserId, transaction)}}</span>
+          <span class="amount item">$ {{transaction.amount}}</span>
+          <span class="date item">{{transaction.date}}</span>
+          <span class="status item" [ngClass]="getTransactionColor(transaction)">{{getTransactionStatus(transaction)}}</span>
       </div>
-
-      <div class="flex-row">
-          <span class="name item">Karen Hope</span>
-          <span class="amount item">$69,038</span>
-          <span class="date item">25 Ene, 2023</span>
-          <span class="status canceled item">Cancelado</span>
-      </div>
-
-      <div class="flex-row">
-          <span class="name item">Tony S.</span>
-          <span class="amount item">$69,038</span>
-          <span class="date item">25 Ene, 2023</span>
-          <span class="status pending item">Pendiente</span>
-      </div>
-      <div class="flex-row">
-        <span class="name item">Tony S.</span>
-        <span class="amount item">$69,038</span>
-        <span class="date item">25 Ene, 2023</span>
-        <span class="status pending item">Pendiente</span>
-    </div>
-    <div class="flex-row">
-      <span class="name item">Tony S.</span>
-      <span class="amount item">$69,038</span>
-      <span class="date item">25 Ene, 2023</span>
-      <span class="status pending item">Pendiente</span>
-  </div>
 
   </div>
 </div>

@@ -1,13 +1,15 @@
-import { Component, Input } from '@angular/core';
+import { Component, Input, OnInit } from '@angular/core';
 
 import { Transaction } from '../../models/transaction.model';
+import { TransactionService } from '../../services/transaction.service';
 
 @Component({
   selector: 'app-last-transactions',
   templateUrl: './last-transactions.component.html',
   styleUrls: ['./last-transactions.component.css']
 })
-export class LastTransactionsComponent {
+export class LastTransactionsComponent implements OnInit {
+
   @Input() transactions: Transaction[] = [
     {
       id: 1,
@@ -120,12 +122,12 @@ export class LastTransactionsComponent {
 
   getTransactionColor(transaction: Transaction): string {
     if (transaction.operationState === 'SUCCESS') {
-      return 'green';
+      return 'completed';
     }
     if (transaction.operationState === 'FAILED') {
-      return 'red';
+      return 'canceled';
     }
-    return 'grey';
+    return 'pending';
   }
 
   getTransactionStatus(transaction: Transaction): string {
@@ -136,6 +138,16 @@ export class LastTransactionsComponent {
       return 'Fallida';
     }
     return 'Pendiente';
+  }
+
+  constructor(private transactionService: TransactionService) { }
+
+  ngOnInit(): void {
+    this.transactionService.getTransactions().subscribe(
+      (transactions) => {
+        this.transactions = transactions;
+      }
+    );
   }
 
 }
