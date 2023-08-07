@@ -65,7 +65,7 @@ export class BarChartComponent {
       },
       y: {
         ticks: {
-          maxTicksLimit: 5
+          maxTicksLimit: 6
         }
       }
     }

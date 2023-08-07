@@ -22,6 +22,7 @@ import { IncomeCardComponent } from './components/income-card/income-card.compon
 import { OutcomeCardComponent } from './components/outcome-card/outcome-card.component';
 import { NgChartsModule } from 'ng2-charts';
 import { BarChartComponent } from './components/bar-chart/bar-chart.component';
+import { LastTransactionsComponent } from './components/last-transactions/last-transactions.component';
 
 @NgModule({
   declarations: [
@@ -38,7 +39,8 @@ import { BarChartComponent } from './components/bar-chart/bar-chart.component';
     CreditCardComponent,
     IncomeCardComponent,
     OutcomeCardComponent,
-    BarChartComponent
+    BarChartComponent,
+    LastTransactionsComponent
   ],
   imports: [
     BrowserModule,
