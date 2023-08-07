@@ -22,6 +22,9 @@ export class HeaderComponent {
     dniType: 'DNI',
     dni: '12345678',
     email: '',
-    role: 'USER'
+    role: 'USER',
+    balance: 0,
+    last30DaysIncome: 0,
+    last30DaysOutcome: 0
   };
 }

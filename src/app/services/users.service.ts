@@ -16,4 +16,8 @@ export class UsersService {
   create(dto: CreateUserDTO) {
     return this.http.post<User>(`${this.apiUrl}/user`, dto);
   }
+
+  getProfile() {
+    return this.http.get<User>(`${this.apiUrl}/user`);
+  }
 }

@@ -1,7 +1,7 @@
 <div class="basic-cards">
-  <app-credit-card></app-credit-card>
-  <app-income-card></app-income-card>
-  <app-outcome-card></app-outcome-card>
+  <app-credit-card [balance]="user.balance"></app-credit-card>
+  <app-income-card [income]="user.last30DaysIncome"></app-income-card>
+  <app-outcome-card [outcome]="user.last30DaysOutcome"></app-outcome-card>
 </div>
 <div class="stats">
   <app-bar-chart></app-bar-chart>
